@@ -190,3 +190,5 @@ esac
 export EDITOR=vim
 
 export PATH=~/homebrew/bin/:$PATH
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
