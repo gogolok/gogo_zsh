@@ -165,6 +165,8 @@ alias -s c=gvim
 alias -s cpp=gvim
 alias -s h=gvim
 
+alias be='bundle exec'
+
 # Key bindings 
 
 bindkey -e
