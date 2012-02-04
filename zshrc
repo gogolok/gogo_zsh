@@ -129,7 +129,7 @@ zstyle ':completion:*:*:*' hosts $ssh_config_hosts $ssh_known_hosts
 
 # ls aliases
 # ls in FreeBSD http://freebsd-node.de/Farbiges_ls
-if [ $(uname) = "Darwin" ]; then alias ls='ls -G'; else alias ls='ls --color=auto'; fi
+if [ $(uname) = "Darwin" ] || [ $(uname) = "FreeBSD" ]; then alias ls='ls -G'; else alias ls='ls --color=auto'; fi
 alias l='ls -lh'
 alias ll='ls -l'
 
