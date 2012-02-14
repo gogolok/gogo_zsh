@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# Path to zsh configuration
+ZSH=$HOME/.zsh
+
 # man zshoptions
 setopt NO_all_export
 setopt always_last_prompt
@@ -191,6 +194,9 @@ esac
 
 export EDITOR=vim
 
-export PATH=~/homebrew/bin/:$PATH
+if [[ -z "$ZSH_CUSTOM" ]]; then
+  ZSH_CUSTOM="$ZSH/custom"
+fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+# load custom configurations
+for config_file ($ZSH_CUSTOM/*.zsh) source $config_file
